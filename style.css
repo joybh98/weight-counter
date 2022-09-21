@@ -1,38 +1,36 @@
-.navbar {
+* {
+    font-family: Arial, Helvetica, sans-serif;
+}
+header {
     display: flex;
-    flex-direction: row;
     justify-content: space-between;
-    background-color: cadetblue;
+    align-items: center;
+}
+#nav-title {
+    margin-right: auto;
+}
+header li {
+    list-style: none;
+    display: inline-block;
+    padding: 0 2px;
 }
 
-.logo-item1 {
-    align-items: stretch;
-    /*padding: 1%;*/
-    background-color: aqua;
+header a {
+    text-decoration: none;
+    color: #555;
+    transition: all 0.3s ease 0s;
 }
-.aboutus-item2 {
-    align-self: center;
-    background-color: blue;
+
+header a:hover {
+    color: #b2dfdb;
 }
 
 .container {
     display: flex;
-    background-color: yellow;
-    flex-direction: row;
-    justify-content: space-evenly;
+    justify-content: space-around;
+    align-items: center;
 }
 
-#previousWeek {
-    background-color: coral;
-}
-
-#thisWeek {
-    background-color: coral;
-}
-
-#footer {
-    background-color: burlywood;
-}
-#footerItems {
+footer h3 {
     text-align: center;
 }
