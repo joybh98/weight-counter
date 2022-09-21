@@ -1,0 +1,38 @@
+.navbar {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: cadetblue;
+}
+
+.logo-item1 {
+    align-items: stretch;
+    /*padding: 1%;*/
+    background-color: aqua;
+}
+.aboutus-item2 {
+    align-self: center;
+    background-color: blue;
+}
+
+.container {
+    display: flex;
+    background-color: yellow;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+#previousWeek {
+    background-color: coral;
+}
+
+#thisWeek {
+    background-color: coral;
+}
+
+#footer {
+    background-color: burlywood;
+}
+#footerItems {
+    text-align: center;
+}
