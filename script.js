@@ -1,12 +1,7 @@
 console.log("Script connected");
 
-document.addEventListener("click",showInput);
-
-function showInput() {
-    document.getElementById("hiddenInput").style.display="block";
-    console.log("Input shown");
-}
+document.addEventListener("click",togglePopup);
 
 function togglePopup() {
-    document.getElementById("popup-1").classList.toggle("active");
+    document.getElementById("popup-1").style.display="block";
 }
