@@ -27,18 +27,32 @@
             <p class="thisweight">this Weight</p>
             <p class="thisdate">this Date</p>
         </div>
-
-        <div id="hiddenInput" style="display: none;">
+        
+        
+        <!--<div id="hiddenInput" style="display: none;">
             <h3>Upload Image</h3>
             <img src="sameple.jpg" height="320" width="320">
             <p class="thisweight">Add weight</p>
             <p class="thidate">Add date</p>
+        </div>-->
+    </div>
+    
+    <div class="popup" id="popup-1">
+        <div class="overlay"></div>
+        <div class="content">
+            
+                <h3>Upload Image</h3>
+                <img src="sameple.jpg" height="320" width="320">
+                <p class="thisweight">Add weight</p>
+                <p class="thidate">Add date</p>
+            
         </div>
     </div>
 
-    <button type="button" onclick="showInput()">
+    <button type="button" onclick="togglePopup()">
         Add Input
     </button>
+
     <footer id="footer">
         <div id="footerItems">
             <h3>This is the footer</h3>
