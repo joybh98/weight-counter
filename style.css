@@ -46,6 +46,11 @@ header {
 .popup {
     display: none;
 }
+
+.class-btn {
+    position: absolute;
+}
+
 /* use 576px as the mobile breaking point to turn it into flex column*/
 
 @media screen and (max-width:576px) {
