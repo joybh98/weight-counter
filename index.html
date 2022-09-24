@@ -16,7 +16,7 @@
 
         <div id="previousWeek">
             <h3>Previous Image</h3>
-            <img src="sameple.jpg" height="320" width="320">
+            <img src="sameple.jpg" height="320" width="320" id="previousWeekImage">
             <p class="prevweight">Previous Weight</p>
             <p class="previousdate">Previous Date</p>
         </div>
@@ -41,11 +41,20 @@
         <div class="overlay"></div>
         <div class="content">
         <div class="class-btn">&times;</div>
-                <h3>Upload Image</h3>
-                <img src="sameple.jpg" height="320" width="320">
-                <p class="thisweight">Add weight</p>
-                <p class="thidate">Add date</p>
-            
+        <form class="inputForm">
+            <label for="image">Enter Image</label>
+            <br>
+            <input type="file" id="picture">
+            <br>
+            <label for="weight">Enter Weight</label>
+            <br>
+            <input type="number" id="weight">
+            <br>
+            <label for="date">Enter Date</label>
+            <br>
+            <input type="date" id="date">
+            <button type="submit" onsubmit="saveInput()">Save</button>
+        </form>            
         </div>
     </div>
 
