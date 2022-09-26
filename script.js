@@ -1,17 +1,16 @@
-console.log("Script connected");
+const modal = document.querySelector(".modal");
+const trigger = document.querySelector(".trigger");
+const closeButton = document.querySelector(".close-button");
 
-document.addEventListener("click",togglePopup);
-
-function togglePopup() {
-    document.getElementById("popup-1").style.display="block";
+function toggleModal() {
+    modal.classList.toggle("show-modal");
 }
 
-document.addEventListener("submit",saveInput);
-
-function saveInput() {
-    var image=document.getElementById("picture").value;
-    var weight=document.getElementById("weight").value;
-    var date=document.getElementById("date").value;
-
-    console.log(weight,date);
+function windowOnClick(event) {
+    if (event.target === modal) {
+        toggleModal();
+    }
 }
+
+trigger.addEventListener("click", toggleModal);
+closeButton.addEventListener("click", toggleModal);

@@ -5,68 +5,39 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <title>Weight Counter App</title>
+    <title>Layout</title>
 </head>
 <body>
-    <header>
-        <h1 id="nav-title">Weight Watch</h1>
-    </header>
-
-    <div class="container">
-
-        <div id="previousWeek">
-            <h3>Previous Image</h3>
-            <img src="sameple.jpg" height="320" width="320" id="previousWeekImage">
-            <p class="prevweight">Previous Weight</p>
-            <p class="previousdate">Previous Date</p>
-        </div>
-
-        <div id="thisWeek">
-            <h3>This Image</h3>
-            <img src="sameple.jpg" height="320" width="320">
-            <p class="thisweight">this Weight</p>
-            <p class="thisdate">this Date</p>
-        </div>
-        
-        
-        <!--<div id="hiddenInput" style="display: none;">
-            <h3>Upload Image</h3>
-            <img src="sameple.jpg" height="320" width="320">
-            <p class="thisweight">Add weight</p>
-            <p class="thidate">Add date</p>
-        </div>-->
-    </div>
-    
-    <div class="popup" id="popup-1">
-        <div class="overlay"></div>
-        <div class="content">
-        <div class="class-btn">&times;</div>
-        <form class="inputForm">
-            <label for="image">Enter Image</label>
-            <br>
-            <input type="file" id="picture">
-            <br>
-            <label for="weight">Enter Weight</label>
-            <br>
-            <input type="number" id="weight">
-            <br>
-            <label for="date">Enter Date</label>
-            <br>
-            <input type="date" id="date">
-            <button type="submit" onsubmit="saveInput()">Save</button>
-        </form>            
+    <div class="container" id="container">
+        <div>
+            <h2>Weight Watcher</h2>
         </div>
     </div>
 
-    <button onclick="togglePopup()">
-        Add Input
-    </button>
+    <div class="input-container">
 
-    <footer id="footer">
-        <div id="footerItems">
-            <h3>This is the footer</h3>
+        <div class="previousWeek">
+            <img src="assets\1.jpg" alt="">
+            <p>Placeholder 1</p>
         </div>
-    </footer>
+
+        <div class="thisWeek">
+            <img src="assets\1.jpg" alt="">
+            <p>Placeholder 2</p>
+        </div>
+
+        <button class="trigger">Click here to trigger the modal !</button>
+        <div class="modal">
+            <div class="modal-content">
+                <span class="close-button">&times;</span>
+                <h1>Hello, I am a modal</h1>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer-container">
+        <p class="footer-para">This is the footer</p>
+    </div>
     <script src="script.js"></script>
 </body>
 </html>
