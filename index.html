@@ -17,7 +17,7 @@
     <div class="input-container">
 
         <div class="previousWeek">
-            <img src="assets\1.jpg" alt="">
+            <img src="assets\1.jpg" alt="" id="previousImage">
             <p>Placeholder 1</p>
         </div>
 
@@ -26,13 +26,14 @@
             <p>Placeholder 2</p>
         </div>
 
-        <button class="trigger">Click here to trigger the modal !</button>
+        <button class="trigger">Add Data</button>
         <div class="modal">
             <div class="modal-content">
                 <span class="close-button">&times;</span>
-                <h1>Hello, I am a modal</h1>
+                <input type='file' accept='image/*' onchange='openFile(event)'>
             </div>
         </div>
+        
     </div>
 
     <div class="footer-container">
