@@ -15,13 +15,22 @@ function windowOnClick(event) {
 trigger.addEventListener("click", toggleModal);
 closeButton.addEventListener("click", toggleModal);
 
-var openFile = function(file) {
-    var input = file.target;
-    var reader = new FileReader();
-    reader.onload = function(){
-      var dataURL = reader.result;
-      var output = document.getElementById('previousImage');
-      output.src = dataURL;
-    };
-    reader.readAsDataURL(input.files[0]);
-};  
+        //retrieve file input
+        document.querySelector("#input-image").addEventListener("change",function() {
+            // as localstorage only supports storing strings, we have to convert our image to a datURL
+            const reader=new FileReader();
+
+            reader.addEventListener("load",() => {
+                localStorage.setItem("recent-image",reader.result);
+            })
+            
+            reader.readAsDataURL(this.files[0]);
+            //console.log(this.files);
+        })
+
+        document.addEventListener("DOMContentLoaded",() => {
+            const recentImageDataURL=localStorage.getItem("recent-image");
+            if(recentImageDataURL) {
+                document.querySelector("#previousImage").setAttribute("src",recentImageDataURL);
+            }
+        })
