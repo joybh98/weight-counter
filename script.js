@@ -21,16 +21,23 @@ closeButton.addEventListener("click", toggleModal);
             const reader=new FileReader();
 
             reader.addEventListener("load",() => {
-                localStorage.setItem("recent-image",reader.result);
+                localStorage.setItem("previous-image",reader.result);
+                localStorage.setItem("next-image",reader.result);
+                //console.log(reader.result);
             })
             
-            reader.readAsDataURL(this.files[0]);
+            reader.readAsDataURL(this.file[0]);
+            reader.readAsDataURL(this.file[1]);    
+            
+            //reader.readAsDataURL(this.files[0]);
             //console.log(this.files);
         })
 
         document.addEventListener("DOMContentLoaded",() => {
-            const recentImageDataURL=localStorage.getItem("recent-image");
-            if(recentImageDataURL) {
-                document.querySelector("#previousImage").setAttribute("src",recentImageDataURL);
+            const recentImageDataURL_one=localStorage.getItem("previous-image");
+            const recentImageDataURL_two=localStorage.getItem("next-image");
+            if(recentImageDataURL_one && recentImageDataURL_two) {
+                document.querySelector("#previousImage").setAttribute("src",recentImageDataURL_one);
+                document.querySelector("#nextImage").setAttribute("src",recentImageDataURL_two)
             }
         })
