@@ -1,0 +1,8 @@
+# Logs
+logs
+*.log
+npm-debug.log*
+
+# dependencies
+node_modules/
+uploads/
