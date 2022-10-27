@@ -3,6 +3,13 @@ const multer=require("multer");
 const path=require("path");
 const app=express();
 
+const baseUrl="http://localhost:3000/";
+
+function handleRedirect(req,res){
+    const homeUrl=baseUrl+"home";
+    res.redirect(200,homeUrl);
+}
+
 //middlware logic
 const fileStorageEngine=multer.diskStorage({
     //set destination for the uploads
@@ -23,11 +30,12 @@ const upload=multer({storage:fileStorageEngine});
 app.post('/single',upload.single('image'),(req,res)=>{
     //print the file data
     console.log(req.file);
-    res.send('Single file upload success')
-    //res.redirect('/home')
+    handleRedirect(req,res);
+    //res.send('Single file upload success')
 })
-app.listen(3000);
 
 app.get('/home',(req,res)=>{
     res.sendFile(path.join(__dirname, '/index.html'));
 })
+
+app.listen(3000);
