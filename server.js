@@ -1,6 +1,6 @@
 const express=require("express");
 const multer=require("multer");
-
+const path=require("path");
 const app=express();
 
 //middlware logic
@@ -24,5 +24,10 @@ app.post('/single',upload.single('image'),(req,res)=>{
     //print the file data
     console.log(req.file);
     res.send('Single file upload success')
+    //res.redirect('/home')
 })
 app.listen(3000);
+
+app.get('/home',(req,res)=>{
+    res.sendFile(path.join(__dirname, '/index.html'));
+})
